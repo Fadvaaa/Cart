@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .bg{
+        background-color:rgb(178, 248, 248);
+      }
+    </style>
+</head>
+<body class="bg">
+    <form action="/update" method="post">
+      Item:<input type="text" name="itm" value="<%=item.name%>"readonly required><br><br>
+      Image:<input type="image" name="img" value="<%=item.image%>" required><br><br>
+      Description:<textarea  name="dp" value="<%=item.description%>" required></textarea><br><br>
+      Discount:<input type="number" name="dc" value="<%=item.discount%>" required><br><br>
+      Shipping Charge:<input type="number" name="sc" value="<%=item.shippingcharge%>"required><br><br>
+      MRP:<input type="number" name="pp" value="<%=item.mrp%>" required><br><br>
+
+      <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+

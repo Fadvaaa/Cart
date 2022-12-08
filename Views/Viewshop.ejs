@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-color: rgb(178, 248, 248);
+        }
+    </style>
+</head>
+<body class="bg">
+    <table border="6px" width="50%">
+        <tr>
+            <th>ITEM</th>
+            <th>IMAGE</th>                                                    
+            <th>DESCRIPTION</th>
+            <th>DISCOUNT</th>
+            <th>SHIPPING CHARGE</th>
+            <th>MRP</th>
+
+        </tr>
+        <% items.forEach((i)=>{ %>
+        <tr>
+            <td><%=i.name%></td>
+            <td><%=i.image%></td>
+            <td><%=i.description%></td>
+            <td><%=i.discount%></td>
+            <td><%=i.shippingcharge%></td>
+            <td><%=i.mrp%></td>
+            <th><a href="/delete/<%=i.name%>"><button type="button"  style="color: #fff;background-color:black">delete</button></a></th>
+            <th><a href="/update/<%=i.name%>"><button type="button" style="color: #fff;background-color:black">update</button></a></th>
+
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
+
